@@ -2,6 +2,9 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+        I'm sorry, I didn't understand that. Please type "Main Menu" to return to the Main Menu
+        or type "Begin" to start over. To quit, simply type "End".
+    </template>
   </category>
 </aiml>
