@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>Begin</pattern>
+	    <template>Hello! I'm a Career Advisor Bot provided to you by your University. 
+	    Could you please tell me your first name?
+	    </template>
+	</category>
+	<category>
+	    <that>Could you please tell me your first name</that>
+	    <pattern>_</pattern>
+	    <template>It's nice to meet you, <set name = "username"><star/></set>! How can I help you today?
+	        <button>
+	            <text>Tell me about the field of...</text>
+	            <postback>fieldSelection</postback>
+	        </button>
+	        <button>
+	            <text>Help me choose a career path.</text>
+	            <postback>choosePath</postback>
+	        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>mainMenu</pattern>
+	    <template>
+	        How else can I help, <get name = "username"></get>?
+	        <button>
+	            <text>Tell me about the field of...</text>
+	            <postback>fieldSelection</postback>
+	        </button>
+	        <button>
+	            <text>Help me choose a career path.</text>
+	            <postback>choosePath</postback>
+	        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>fieldSelection</pattern>
+	    <template>Which field are you interested in learning more about?
+	        <button>
+	            <text>Software Development</text>
+	            <postback>softwareDevInfo</postback>
+	        </button>
+	        <button>
+	            <text>Web Development</text>
+	            <postback>webDevInfo</postback>
+	        </button>
+	        <button>
+	            <text>Database Administration</text>
+	            <postback>databaseInfo</postback>
+	        </button>
+	        <button>
+	            <text>Cybersecurity</text>
+	            <postback>securityInfo</postback>
+	        </button>
+	        <button>
+	            <text>Game Development</text>
+	            <postback>gameDevInfo</postback>
+	        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>choosePath</pattern>
+	    <template>
+	        Okay, I will ask you a few questions to determine your career aptitude.
+	        <br></br><br></br>
+	        Are you more interested in writing code, or would you rather work on Infrastructure
+	        and more "big picture" tasks?
+	    </template>
+	</category>
+	<category>
+	    <that>_ big picture tasks</that>
+	    <pattern> ^ <set>infrastructure</set> </pattern>
+	    <template>
+	        Great! Next, do you enjoy working with Data/SQL, or are you more interested in 
+	        working on Networks and maintaining security?
+	    </template>
+	</category>
+	<category>
+	    <that>_ maintaining security</that>
+	    <pattern> ^ <set>data</set> ^ </pattern>
+	    <template>
+	        You should consider a career in Database Administration!
+	        <br></br><br></br>
+	        <srai>databaseInfo</srai>
+	    </template>
+	</category>
+	<category>
+	    <that>_ maintaining security</that>
+	    <pattern> ^ <set>security</set> ^ </pattern>
+	    <template>
+	        I think you'd be great working in Cybersecurity!
+	        <br></br><br></br>
+	        <srai>securityInfo</srai>
+	    </template>
+	</category>
+	<category>
+	    <that>_ big picture tasks</that>
+	    <pattern> ^ <set>coding</set> ^ </pattern>
+	    <template>
+	        Sounds good. Next, are you more interested in Front End/design aspects 
+	        of coding or in the Back End making everything work?
+	    </template>
+	</category>
+	<category>
+	    <that>_ making everything work</that>
+	    <pattern> ^ <set>backend</set> ^ </pattern>
+	    <template>
+	        Alright. Finally, would you say it's very important for you 
+	        to work in a very creative environment?
+	    </template>
+	</category>
+	<category>
+	    <that>_ making everything work</that>
+	    <pattern> ^ <set>design</set> </pattern>
+	    <template>
+	        Alright. Finally, would you say it's very important for you 
+	        to work in a highly creative environment?
+	    </template>
+	</category>
+	<category>
+	    <that>_ creative environment</that>
+	    <pattern> <set>yes</set> </pattern>
+	    <template>
+	        I think you should look into becoming a Game Developer!
+	        <br></br><br></br>
+	        <srai>gameDevInfo</srai>
+	    </template>
+	</category>
+	<category>
+	    <that>_ very creative environment</that>
+	    <pattern> <set>no</set> </pattern>
+	    <template>
+	        I think you should consider becoming a Software Development Engineer!
+	        <br></br><br></br>
+	        <srai>softwareDevInfo</srai>
+	    </template>
+	</category>
+	<category>
+	    <that>_ highly creative environment</that>
+	    <pattern> <set>no</set> </pattern>
+	    <template>
+	        I think you should take a look at Web Development!
+	        <br></br><br></br>
+	        <srai>webDevInfo</srai>
+	    </template>
+	</category>
+	<category>
+	    <pattern>end</pattern>
+	    <template>
+	        It's been a pleasure, <get name = "username"></get>! If you'd like more help, 
+	        just say "Main Menu" to start over. Otherwise, have a great day! 😊
+	    </template>
+	</category>
+	<category>
+	    <pattern>Main Menu</pattern>
+	    <template>
+	        Welcome back!
+	        <br></br>
+	        <srai>mainMenu</srai>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Help</pattern>
+	    <template>
+	        To return to the Main Menu, simply say "Main Menu".
+	        To completely restart, say "Begin".
+	    </template>
+	</category>
+</aiml>

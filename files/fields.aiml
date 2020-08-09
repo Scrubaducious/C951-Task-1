@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>softwareDevInfo</pattern>
+	    <template>
+	        Software Development Engineers create computer applications that help users solve problems. 
+	        They often work with clients to develop solutions that match the client's specific needs.
+	        <br></br>
+	        <link>
+	            <text>Click here to learn more about Software Development careers.</text>
+	            <url>https://www.onetonline.org/link/summary/15-1132.00</url>
+            </link>
+            <br></br>
+            Would you like to return to the Main Menu?
+            <button>
+                <text>Yes</text>
+                <postback>mainMenu</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>end</postback>
+            </button>
+        </template>
+	</category>
+	<category>
+	    <pattern>webDevInfo</pattern>
+	    <template>
+	        Web Developers often work on both the front and back-end of Web Applications. 
+	        They can build Websites for clients or develop full web-based Apps.
+	        <br></br>
+	        <link>
+	            <text>Click here to learn more about Web Development careers.</text>
+	            <url>https://www.onetonline.org/link/summary/15-1134.00</url>
+            </link>
+            <br></br>
+            Would you like to return to the Main Menu?
+            <button>
+                <text>Yes</text>
+                <postback>mainMenu</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>end</postback>
+            </button>
+        </template>
+	</category>
+		<category>
+	    <pattern>databaseInfo</pattern>
+	    <template>
+	        Database Administrators help to build and maintain Databases to store various Data. 
+	        They may also play a role in ensuring the security of Data.
+	        <br></br>
+	        <link>
+	            <text>Click here to learn more about Database Administration careers.</text>
+	            <url>https://www.onetonline.org/link/summary/15-1141.00</url>
+            </link>
+            <br></br>
+            Would you like to return to the Main Menu?
+            <button>
+                <text>Yes</text>
+                <postback>mainMenu</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>end</postback>
+            </button>
+        </template>
+	</category>
+		<category>
+	    <pattern>securityInfo</pattern>
+	    <template>
+	        Cybersecurity Experts are responsible for implementing measures that ensure Network Safety.
+	        They are usually in charge of handling breaches of security or viruses in Computer Networks.
+	        <br></br>
+	        <link>
+	            <text>Click here to learn more about Cybersecurity careers.</text>
+	            <url>https://www.onetonline.org/link/summary/15-1122.00</url>
+            </link>
+            <br></br>
+            Would you like to return to the Main Menu?
+            <button>
+                <text>Yes</text>
+                <postback>mainMenu</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>end</postback>
+            </button>
+        </template>
+	</category>
+		<category>
+	    <pattern>gameDevInfo</pattern>
+	    <template>
+	        Game Developers work with a diverse team to plan, design, and program the functionality of video games. 
+	        They usually work with a large team of creative individuals to bring one cohesive vision to life.
+	        <br></br>
+	        <link>
+	            <text>Click here to learn more about Game Development careers.</text>
+	            <url>https://www.jobhero.com/job-description/examples/computer-software/game-developer#:~:text=Game%20developers%20work%20on%20teams,the%20game's%20features%20and%20functionality.</url>
+            </link>
+            <br></br>
+            Would you like to return to the Main Menu?
+            <button>
+                <text>Yes</text>
+                <postback>mainMenu</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>end</postback>
+            </button>
+        </template>
+	</category>
+</aiml>
